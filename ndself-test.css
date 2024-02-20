@@ -39,9 +39,33 @@ h1 {font-weight: 700!important;
 /* NAV BAR COLORS */
 
 .navbar-inverse {
-    background-color: red !important; /* #005E7D */
+    background-color: var(--color-red); /* #005E7D */
     border-bottom: 5px solid #98ab2a !important;
 }
+
+
+
+
+
+
+/* CHANGES FROM 13/02 */
+/* NAV BAR LOGO CONTAINER CHANGE - 13/02 MAY NEED TO BE CHANGED */
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+	box-shadow:none!important;
+}
+
+/*REGISTER/LOGIN MARGIN TOP REMOVED - 13/02 */
+
+#SelfToolbar .login-link, #toolbar .login-link {
+	margin-top:0px!important;
+}
+
+
+
+
+
+
 
 /* TEXT IN GREY BOX BELOW H1 */
 
@@ -149,7 +173,8 @@ a:hover {
 a:visited {color: var(--color-link);
 }
 
-.navbar a:visited {color: white!important;
+.navbar a:visited {
+  color:white;
 }
 
 a:not([class*="toolbar"]):focus {
@@ -159,7 +184,6 @@ a:not([class*="toolbar"]):focus {
   background-color: var(--color-focus);
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  box-shadow: 0 -2px var(--color-focus), 0 4px var(--color-black);
 }
 
 h1,
@@ -356,8 +380,9 @@ body {
     We should not refer to these directly in our CSS however. Instead,
     we use the names at our "Colours Applied" section.
   */
-  --color-accent: #652c95;
+  --color-accent: #005e7d;
   --color-accent-2: #ffe146;
+  --color-visited: #652c95;
   --color-green: #048a04;
   --color-red: #e4251b;
   --color-orange: #ed7522;
@@ -389,7 +414,7 @@ body {
   --color-minor: var(
   --color-yellow);
   --color-link: var(
-  --color-accent);
+  --color-visited);
   --color-focus: var(
   --color-yellow);
 
@@ -924,7 +949,7 @@ ______________________________________ */
 
 .navbar-nav>li {
 	border-right: 2px solid;
-	border-color: #005E7D;
+	border-color: var(--color-red);
 }
 
 .navbar-nav>li>a {
@@ -988,10 +1013,7 @@ ______________________________________ */
 
 /* Buttons */
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
-	background-color: #98ab2a !important;
-	border-color: #98ab2a !important;
-}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {text-decoration: none;color: var(--color-black)!important;border-color: transparent;outline: none;background-color: var(--color-minor)!important;-webkit-box-shadow: inset 0 0 0 2px var(--color-black);box-shadow: inset 0 0 0 2px var(--color-black);}
 
 .btn-primary {
 	background-color: #005E7D !important;
@@ -1086,10 +1108,7 @@ ______________________________________ */
 
 .govuk-list-landing-item h3 {color:#222;font-weight:700;font-size:97%}
 .govuk-list-landing-text {display:block;font-size:80%}
-.govuk-list-landing-link a , a:hover{
-	text-decoration:underline;
-	/*color: #255783 !important;*/
-}
+.govuk-list-landing-link a , a:hover{z-index: 1;text-decoration: none;color: var(--color-black);outline: none;background-color: var(--color-minor);-webkit-box-shadow: 0 0 0 2px var(--color-black);box-shadow: 0 0 0 2px var(--color-black);text-decoration-thickness: unset;}
 
 /* Hide forms */
 
