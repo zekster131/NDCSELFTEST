@@ -18,7 +18,17 @@ NOTES and next TO DO:
 
 - font weight = boldness */
 
+/* ADDED AS OF 04/06/2024 */
 
+.service-cta-block__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #297bbb;
+}
 
 
 
